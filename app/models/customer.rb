@@ -36,12 +36,12 @@ class Customer
 
   def add_review(restaurant, content, rating)
     Review.new(self, restaurant, rating, content)
-    self.num_reviews =+ 1
+    self.num_reviews += 1
   end
 
   def reviews
     Review.all.select do |review|
-      review.customer = self
+      review.customer == self
     end
   end
 

@@ -1,6 +1,6 @@
 class Review
-  attr_accessor :rating, :content, :customer, :restaurant
-  # attr_reader :customer, :restaurant
+  attr_accessor :rating, :content
+  attr_reader :customer, :restaurant
   @@all = []
 
   def initialize(customer, restaurant, rating, content)

@@ -38,11 +38,6 @@ class Restaurant
   end
 
   def longest_review
-    # reviews.sort_by! do |review|
-    #   review.content.length
-    # end.first
-
     reviews.sort_by! {|review| review.content.length}.last
   end
-
 end
