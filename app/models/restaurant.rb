@@ -59,9 +59,25 @@ class Restaurant
     counter
   end
 
+  # def longest_review
+  #   review_content_array.select do |list|
+  #     list.length == length_of_word
+  #   end
+  # end
+
+  def length_of_word_array
+    review_content_array.map do |list|
+      list.length
+    end
+  end
+
+  def max_length
+    length_of_word_array.max
+  end
+
   def longest_review
     review_content_array.select do |list|
-      list.length == length_of_word
+      list.length == max_length
     end
   end
 
